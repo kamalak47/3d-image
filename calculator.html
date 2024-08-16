@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+           background: linear-gradient(black,black);
+        }
+section{ 
+      height: 300px;
+      width: 380px;
+      background-color: black;
+      margin-top: 50px;
+     margin-left: 500px;
+     padding-top: 220px;
+     padding-left: 30px;
+     border-radius: 5px;
+     position: relative;
+     background: linear-gradient(orange,white,green);
+    
+}
+button{
+    height: 70px;
+    width: 70px;
+    margin-right: 20px;
+    border-radius: 50%;
+    font-size: 20px;
+    background: linear-gradient(orange,white,green);
+}
+section::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: conic-gradient(from var(--angle),transparent 70%,orange,white,green);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 15px;
+    border-radius: 1px;
+    animation: spin 2s linear infinite;
+}
+section::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: conic-gradient(from var(--angle),transparent 70%,orange,white,green);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 15px;
+    border-radius: 1px;
+    animation: spin 2s linear infinite;
+    animation-delay: 3s;
+}
+@keyframes spin {
+    form{--angle: 0deg;}
+    to{--angle: 360deg;}
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+
+    </style>
+</head>
+<body>
+    <section>
+        
+<div class="kk1">
+<button>1</button>
+<button>2</button>
+<button>3</button>
+<button>+</button>
+</div>
+<div class="kk2">
+    <button>4</button>
+    <button>5</button>
+    <button>6</button>
+    <button>-</button>
+ </div>
+<div class="kk3">
+    <button>7</button>
+    <button>8</button>
+    <button>9</button>
+    <button>*</button>
+</div>
+<div class="kk3">
+    <button>0</button>
+    <button>00</button>
+    <button>/</button>
+    <button>=</button>
+</div>
+
+
+
+
+
+    </section>
+
+
+</body>
+</html>
